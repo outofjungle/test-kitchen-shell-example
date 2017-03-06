@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: shell
+
+platforms:
+  - name: ubuntu-16.04
+    provisioner:
+      script: scripts/bootstrap-ubuntu.sh
+  - name: centos-7.2
+    provisioner:
+      script: scripts/bootstrap-centos.sh
+
+suites:
+  - name: default
